@@ -33,9 +33,6 @@ class NotesScreen extends StatelessWidget {
             }
             if (state is NotesLoaded) {
               return Container(
-                decoration: const BoxDecoration(
-                  color: Color.fromRGBO(255, 213, 123, 1),
-                ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ListView.builder(
