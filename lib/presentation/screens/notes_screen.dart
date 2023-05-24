@@ -32,19 +32,17 @@ class NotesScreen extends StatelessWidget {
               );
             }
             if (state is NotesLoaded) {
-              return Container(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ListView.builder(
-                    itemCount: state.notes.length,
-                    itemBuilder: (context, index) {
-                      return NoteWidget(
-                        title: state.notes[index].title,
-                        description: state.notes[index].description,
-                        id: state.notes[index].id,
-                      );
-                    },
-                  ),
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView.builder(
+                  itemCount: state.notes.length,
+                  itemBuilder: (context, index) {
+                    return NoteWidget(
+                      title: state.notes[index].title,
+                      description: state.notes[index].description,
+                      id: state.notes[index].id,
+                    );
+                  },
                 ),
               );
             }
